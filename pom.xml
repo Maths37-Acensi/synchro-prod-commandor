@@ -13,7 +13,7 @@
     </parent>
 
     <groupId>com.petg.blois</groupId>
-    <artifactId>synchro-commandor</artifactId>
+    <artifactId>synchro-prod-commandor</artifactId>
     <version>1.0.0</version>
     <name>${project.artifactId}-${project.version}</name>
     <description>Actualisation des données de commandor via prime.</description>
