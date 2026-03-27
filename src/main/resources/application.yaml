@@ -1,0 +1,16 @@
+############################
+# Spring properties
+# See all properties here : https://docs.spring.io/spring-boot/appendix/application-properties/index.html#application-properties.core.spring.messages.use-code-as-default-message
+############################
+spring:
+  main.banner-mode: off
+  output.ansi.enabled: ALWAYS
+  threads.virtual.enabled: false
+logging:
+  pattern.console: "%d [%-5p] %F:%L - %m%n"
+  level:
+    root: WARN
+    org.springframework: WARN
+    org.apache.http.impl.auth: ERROR
+    com.petg.blois: INFO
+batch.key: plan_sap
