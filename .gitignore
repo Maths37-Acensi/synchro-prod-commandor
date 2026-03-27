@@ -26,3 +26,5 @@ hs_err_pid*
 dependency-reduced-pom.xml
 **/target/
 **/resources/parameter*.json
+src/main/resources/application-com1.yaml
+src/main/resources/application-com2.yaml
