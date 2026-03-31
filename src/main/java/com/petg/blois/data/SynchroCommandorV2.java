@@ -17,7 +17,10 @@ public enum SynchroCommandorV2 {
     COMPOSANTPIPO(ComposantPIPO.class, FULL),
     FOURNISSEURPANIER(FournisseurPanier.class, FULL),
     FOURNISSEURPANIERDETAIL(FournisseurPanierDetail.class, FULL),
-    LIGNECOMPOSANTFOURNISSEUR(LigneComposantFournisseur.class, FULL);
+    LIGNECOMPOSANTFOURNISSEUR(LigneComposantFournisseur.class, FULL),
+    NAVETTE(Navette.class, FULL),
+    CONTENEURCONSOMME(ConteneurConsomme.class, FULL),
+    CONTENEURNAVETTE(ConteneurNavette.class, FULL);
 
     final Class<?> clazz;
     final SynchroType synchroType;
