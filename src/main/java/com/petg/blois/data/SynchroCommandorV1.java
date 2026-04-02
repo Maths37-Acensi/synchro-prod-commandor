@@ -1,16 +1,14 @@
 package com.petg.blois.data;
 
-import com.petg.blois.domain.v1.GcasParametrage;
 import com.petg.blois.domain.v1.LigneSap;
 import lombok.Getter;
 import org.apache.logging.log4j.util.Strings;
 
-import static com.petg.blois.data.SynchroType.DELTA_ID;
 import static com.petg.blois.data.SynchroType.FULL;
 
 @Getter
 public enum SynchroCommandorV1 {
-    GCAS_PARAMETRAGE(GcasParametrage.class, DELTA_ID),
+    //GCAS_PARAMETRAGE(GcasParametrage.class, DELTA_ID),
     LIGNE_SAP(LigneSap.class, FULL);/*,
     NAVETTE(Navette.class, DELTA_DATE, "horodate"),
     NAVETTE_CONTENU(NavetteContenu.class, DELTA_ID),
