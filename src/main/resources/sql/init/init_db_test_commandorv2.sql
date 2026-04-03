@@ -5,19 +5,19 @@ TRUNCATE TABLE Composant;
 TRUNCATE TABLE ComposantPIPO;
 TRUNCATE TABLE ConteneurConsomme;
 TRUNCATE TABLE ConteneurNavette;
-TRUNCATE TABLE EncoursSaisi;
-TRUNCATE TABLE ForcageCommande;
+--TRUNCATE TABLE EncoursSaisi;
+--TRUNCATE TABLE ForcageCommande;
 TRUNCATE TABLE FournisseurPanier;
 TRUNCATE TABLE FournisseurPanierDetail;
 TRUNCATE TABLE LigneComposant;
 TRUNCATE TABLE LigneComposantFournisseur;
 TRUNCATE TABLE Navette;
 TRUNCATE TABLE Notification;
-TRUNCATE TABLE OuvertureLigne;
+--TRUNCATE TABLE OuvertureLigne;
 TRUNCATE TABLE PoPacking;
 TRUNCATE TABLE PoPackingComposant;
 TRUNCATE TABLE ProduitFini;
-TRUNCATE TABLE Session;
+--TRUNCATE TABLE Session;
 
 UPDATE User SET email = 'pg@acensi.fr';
 UPDATE Fournisseur SET emailsCommande = 'pg@acensi.fr';
@@ -190,8 +190,11 @@ CREATE TABLE ConteneurNavette_tmp (
     version int DEFAULT 0
 );
 
-ALTER SEQUENCE seq_navettes RESTART WITH (SELECT MAX(id) + 10 FROM navettes);
-ALTER SEQUENCE seq_conteneurs_navettes RESTART WITH (SELECT MAX(id) + 10 FROM conteneursnavettes);
+SELECT MAX(id) + 10 FROM navette;
+ALTER SEQUENCE seq_navettes RESTART WITH <RESULT>;
+
+SELECT MAX(id) + 10 FROM conteneurnavette;
+ALTER SEQUENCE seq_conteneurs_navettes RESTART WITH <RESULT>;
 
 use pg_commandorv2_logs;
 

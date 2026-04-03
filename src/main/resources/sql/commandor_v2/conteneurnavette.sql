@@ -1,6 +1,6 @@
 INSERT INTO conteneurnavette (id, idForcageCommande, idLigne, idNavette, slotNavette, horoConsoEstimee, qteComposants,
                               codeStatut, idComposant, ordreConso, pourAmorcage, SSCC, version)
-SELECT cn_prod.id,
+SELECT NEXT VALUE FOR seq_conteneurs_navettes,
        NULL,
        cn_prod.idLigne,
        cn_prod.idNavette,

@@ -14,5 +14,5 @@ SELECT pp_prod.idLigne,
 FROM popacking_tmp pp_prod
          INNER JOIN produitfini_tmp pf_prod ON pp_prod.idProduitFini = pf_prod.id
          INNER JOIN produitfini pf_test ON pf_prod.gcas = pf_test.gcas
-         LEFT OUTER JOIN popacking pp_test ON pp_prod.numPo = pp_test.numPo AND pp_prod.ordre = pp_test.numPo
+         LEFT OUTER JOIN popacking pp_test ON pp_prod.numPo = pp_test.numPo AND pp_prod.ordre = pp_test.ordre
 WHERE pp_test.id IS NULL;
